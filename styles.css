@@ -209,6 +209,21 @@ section h2 {
   background-color: var(--color-primary-dark);
 }
 
+.contact-social {
+  margin-top: var(--spacing-md);
+  color: var(--color-muted);
+}
+
+.contact-social a {
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-social a:hover {
+  text-decoration: underline;
+}
+
 /* Pie de página */
 .footer {
   display: flex;
@@ -218,6 +233,11 @@ section h2 {
   padding: var(--spacing-md) var(--spacing-lg);
   background-color: var(--color-primary-dark);
   color: #ffffff;
+}
+
+.footer__links {
+  display: flex;
+  gap: var(--spacing-md);
 }
 
 .footer a {
