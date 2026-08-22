@@ -84,3 +84,40 @@ body {
   margin: 0;
   color: var(--color-muted);
 }
+
+/* Secciones generales */
+section {
+  padding: var(--spacing-lg);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+#sobre-mi article p {
+  max-width: 45rem;
+  color: var(--color-muted);
+}
+
+/* Habilidades */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills__item {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+  color: var(--color-primary-dark);
+  font-weight: bold;
+}
+
+.skills__item:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
