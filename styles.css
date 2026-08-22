@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: var(--font-base);
@@ -88,10 +92,13 @@ body {
 /* Secciones generales */
 section {
   padding: var(--spacing-lg);
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 section h2 {
   margin-top: 0;
+  color: var(--color-primary-dark);
 }
 
 #sobre-mi article p {
@@ -219,4 +226,22 @@ section h2 {
 
 .footer a:hover {
   color: var(--color-primary);
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero__text {
+    max-width: 100%;
+  }
 }
