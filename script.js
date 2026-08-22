@@ -33,4 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal();
     }
   });
+
+  const projectsContainer = document.querySelector(".projects");
+  const projectsToggle = document.getElementById("projects-toggle");
+
+  projectsToggle.addEventListener("click", () => {
+    const expanded = projectsContainer.classList.toggle("is-expanded");
+    projectsToggle.textContent = expanded ? "Ver menos" : "Ver más";
+  });
 });
