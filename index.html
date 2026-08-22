@@ -46,13 +46,50 @@
 
     <section id="habilidades">
       <h2>Habilidades</h2>
+      <p class="skills__hint">Toca una habilidad para ver más detalles.</p>
       <ul class="skills">
-        <li class="skills__item">Soporte técnico</li>
-        <li class="skills__item">Redes y conectividad</li>
-        <li class="skills__item">SQL Server</li>
-        <li class="skills__item">Ciberseguridad (Fortinet)</li>
-        <li class="skills__item">Python</li>
-        <li class="skills__item">HTML</li>
+        <li>
+          <button type="button" class="skills__item" data-skill="Infraestructura"
+            data-desc="Administración de infraestructura IT: aperturas de tiendas, configuración de equipos y cableado de red para operaciones empresariales.">
+            Infraestructura
+          </button>
+        </li>
+        <li>
+          <button type="button" class="skills__item" data-skill="Redes"
+            data-desc="Configuración y mantenimiento de redes: cableado, switches, VPN y resolución de incidencias de conectividad.">
+            Redes
+          </button>
+        </li>
+        <li>
+          <button type="button" class="skills__item" data-skill="Sistemas"
+            data-desc="Administración de sistemas y plataformas empresariales: Directorio Activo, Office 365, bases de datos SQL Server y aplicaciones corporativas.">
+            Sistemas
+          </button>
+        </li>
+        <li>
+          <button type="button" class="skills__item" data-skill="Flutter"
+            data-desc="Desarrollo de aplicaciones móviles multiplataforma con Flutter.">
+            Flutter
+          </button>
+        </li>
+        <li>
+          <button type="button" class="skills__item" data-skill="Python"
+            data-desc="Programación en Python para automatización de procesos y desarrollo de soluciones de software.">
+            Python
+          </button>
+        </li>
+        <li>
+          <button type="button" class="skills__item" data-skill="Java"
+            data-desc="Programación orientada a objetos con Java.">
+            Java
+          </button>
+        </li>
+        <li>
+          <button type="button" class="skills__item" data-skill="HTML"
+            data-desc="Estructuración de páginas web con HTML semántico.">
+            HTML
+          </button>
+        </li>
       </ul>
     </section>
 
@@ -108,5 +145,15 @@
       <a href="https://www.linkedin.com/in/frederitchancaybriones" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </footer>
+
+  <div class="modal" id="skill-modal">
+    <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="skill-modal-title">
+      <button type="button" class="modal__close" aria-label="Cerrar">&times;</button>
+      <h3 id="skill-modal-title"></h3>
+      <p id="skill-modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

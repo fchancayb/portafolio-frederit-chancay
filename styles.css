@@ -107,6 +107,11 @@ section h2 {
 }
 
 /* Habilidades */
+.skills__hint {
+  color: var(--color-muted);
+  margin-top: 0;
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +127,10 @@ section h2 {
   border-radius: 999px;
   color: var(--color-primary-dark);
   font-weight: bold;
+  background: none;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .skills__item:hover {
@@ -246,6 +255,57 @@ section h2 {
 
 .footer a:hover {
   color: var(--color-primary);
+}
+
+/* Modal de habilidades */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  background-color: rgba(31, 41, 55, 0.6);
+  z-index: 100;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal__content {
+  position: relative;
+  max-width: 24rem;
+  width: 100%;
+  padding: var(--spacing-lg);
+  background-color: var(--color-bg);
+  border-radius: 0.5rem;
+}
+
+.modal__content h3 {
+  margin-top: 0;
+  color: var(--color-primary-dark);
+}
+
+.modal__content p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  color: var(--color-primary-dark);
 }
 
 /* Ajustes para pantallas pequeñas */
