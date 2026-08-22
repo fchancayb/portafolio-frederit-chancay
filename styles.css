@@ -121,3 +121,102 @@ section h2 {
   background-color: var(--color-primary);
   color: #ffffff;
 }
+
+/* Proyectos */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.project-card {
+  flex: 1 1 280px;
+  max-width: 360px;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: var(--spacing-md);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.project-card__image {
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.project-card h3 {
+  margin: var(--spacing-sm) 0;
+}
+
+.project-card p {
+  color: var(--color-muted);
+}
+
+.project-card a {
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contacto */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  gap: var(--spacing-sm);
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: var(--spacing-sm);
+  border: 1px solid #cbd5e1;
+  border-radius: 0.25rem;
+  font-family: var(--font-base);
+}
+
+.contact-form button {
+  align-self: flex-start;
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Pie de página */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer a:hover {
+  color: var(--color-primary);
+}
