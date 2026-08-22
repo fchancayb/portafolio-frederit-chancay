@@ -15,5 +15,8 @@ Portafolio personal desarrollado con HTML y CSS como parte de la Actividad integ
 1. Clonar o descargar este repositorio.
 2. Abrir el archivo `index.html` en un navegador web.
 
+Alternativamente, el sitio está publicado con GitHub Pages:
+https://fchancayb.github.io/portafolio-frederit-chancay/
+
 ## Captura de pantalla
 _Pendiente._
