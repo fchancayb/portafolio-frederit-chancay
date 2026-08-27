@@ -44,14 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const THEME_STORAGE_KEY = "portafolio-tema";
   const themeToggle = document.getElementById("theme-toggle");
+  const themeColorMeta = document.getElementById("theme-color-meta");
 
   function applyTheme(theme) {
     if (theme === "dark") {
       document.body.classList.add("dark-mode");
       themeToggle.setAttribute("aria-label", "Cambiar a modo claro");
+      themeColorMeta.setAttribute("content", "#202020");
     } else {
       document.body.classList.remove("dark-mode");
       themeToggle.setAttribute("aria-label", "Cambiar a modo oscuro");
+      themeColorMeta.setAttribute("content", "#f3f3f3");
     }
   }
 
