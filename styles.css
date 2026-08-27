@@ -265,21 +265,6 @@ section h2 {
   filter: brightness(0.9);
 }
 
-.contact-social {
-  margin-top: var(--spacing-md);
-  color: var(--color-muted);
-}
-
-.contact-social a {
-  color: var(--color-primary);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contact-social a:hover {
-  text-decoration: underline;
-}
-
 .contact-form__feedback {
   margin: var(--spacing-sm) 0 0;
   font-weight: bold;
