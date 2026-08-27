@@ -64,4 +64,26 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTheme(nextTheme);
     localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
   });
+
+  const contactForm = document.getElementById("contact-form");
+  const formFeedback = document.getElementById("form-feedback");
+
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const correo = document.getElementById("correo").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    if (nombre === "" || correo === "" || mensaje === "") {
+      formFeedback.textContent = "Por favor completa todos los campos antes de enviar.";
+      formFeedback.classList.remove("contact-form__feedback--success");
+      formFeedback.classList.add("contact-form__feedback--error");
+    } else {
+      formFeedback.textContent = `Gracias, ${nombre}. Tu mensaje ha sido enviado correctamente.`;
+      formFeedback.classList.remove("contact-form__feedback--error");
+      formFeedback.classList.add("contact-form__feedback--success");
+      contactForm.reset();
+    }
+  });
 });

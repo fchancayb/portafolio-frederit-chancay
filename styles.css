@@ -280,6 +280,20 @@ section h2 {
   text-decoration: underline;
 }
 
+.contact-form__feedback {
+  margin: var(--spacing-sm) 0 0;
+  font-weight: bold;
+  min-height: 1.2rem;
+}
+
+.contact-form__feedback--error {
+  color: #dc2626;
+}
+
+.contact-form__feedback--success {
+  color: #16a34a;
+}
+
 /* Pie de página */
 .footer {
   display: flex;
