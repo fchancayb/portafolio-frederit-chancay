@@ -41,4 +41,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const expanded = projectsContainer.classList.toggle("is-expanded");
     projectsToggle.textContent = expanded ? "Ver menos" : "Ver más";
   });
+
+  const THEME_STORAGE_KEY = "portafolio-tema";
+  const themeToggle = document.getElementById("theme-toggle");
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      document.body.classList.add("dark-mode");
+      themeToggle.setAttribute("aria-label", "Cambiar a modo claro");
+    } else {
+      document.body.classList.remove("dark-mode");
+      themeToggle.setAttribute("aria-label", "Cambiar a modo oscuro");
+    }
+  }
+
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || "light";
+  applyTheme(savedTheme);
+
+  themeToggle.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark-mode");
+    const nextTheme = isDark ? "light" : "dark";
+    applyTheme(nextTheme);
+    localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+  });
 });
