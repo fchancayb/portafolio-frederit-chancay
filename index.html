@@ -12,15 +12,26 @@
 <body>
   <header>
     <nav class="navbar">
-      <span class="navbar__brand">Frederit Chancay</span>
-      <ul class="navbar__links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Cambiar a modo oscuro">🎨</button>
+      <span class="navbar__brand">Actividad integradora: Portafolio</span>
+      <div class="nav-menu-wrapper">
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Menú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-menu">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-menu__links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+          <button type="button" class="nav-menu__theme-toggle" id="theme-toggle">
+            <span id="theme-toggle-text">Modo oscuro</span>
+          </button>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -28,7 +39,7 @@
     <section id="inicio" class="hero">
       <img src="img/avatar.svg" alt="Foto de Frederit Chancay" class="hero__avatar">
       <div class="hero__text">
-        <h1>Hola, soy Frederit Chancay</h1>
+        <h1>Hola, soy Frederit F. Chancay</h1>
         <p>Estudiante de Ingeniería en Sistemas Inteligentes, apasionado por el desarrollo web y la tecnología.</p>
       </div>
     </section>
@@ -36,7 +47,7 @@
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
       <article>
-        <p>
+        <p class="about__text" id="about-text">
           Soy Especialista en Soporte, Sistemas e Infraestructura IT con más de 3 años de experiencia
           en soporte técnico, administración de sistemas y gestión de mesas de ayuda. Actualmente curso
           la carrera de Ingeniería en Sistemas Inteligentes en la Universidad Tecnológica ECOTEC, luego de
@@ -45,6 +56,7 @@
           como profesional de sistemas, combinando mi experiencia en soporte e infraestructura con el desarrollo
           de software.
         </p>
+        <button type="button" class="about__toggle" id="about-toggle">Ver más...</button>
       </article>
     </section>
 
@@ -53,15 +65,9 @@
       <p class="skills__hint">Toca una habilidad para ver más detalles.</p>
       <ul class="skills">
         <li>
-          <button type="button" class="skills__item" data-skill="Infraestructura"
-            data-desc="Administración de infraestructura IT: aperturas de tiendas, configuración de equipos y cableado de red para operaciones empresariales.">
-            Infraestructura
-          </button>
-        </li>
-        <li>
-          <button type="button" class="skills__item" data-skill="Redes"
-            data-desc="Configuración y mantenimiento de redes: cableado, switches, VPN y resolución de incidencias de conectividad.">
-            Redes
+          <button type="button" class="skills__item" data-skill="Desarrollo"
+            data-desc="Desarrollo de software y aplicaciones: programación en ABAP, Flutter, Java, Python, PL/SQL.">
+            Desarrollo
           </button>
         </li>
         <li>
@@ -71,27 +77,15 @@
           </button>
         </li>
         <li>
-          <button type="button" class="skills__item" data-skill="Flutter"
-            data-desc="Desarrollo de aplicaciones móviles multiplataforma con Flutter.">
-            Flutter
+          <button type="button" class="skills__item" data-skill="Infraestructura"
+            data-desc="Administración de infraestructura IT: aperturas de tiendas retail, configuración de equipos y cableado de red para operaciones empresariales.">
+            Infraestructura
           </button>
         </li>
         <li>
-          <button type="button" class="skills__item" data-skill="Python"
-            data-desc="Programación en Python para automatización de procesos y desarrollo de soluciones de software.">
-            Python
-          </button>
-        </li>
-        <li>
-          <button type="button" class="skills__item" data-skill="Java"
-            data-desc="Programación orientada a objetos con Java.">
-            Java
-          </button>
-        </li>
-        <li>
-          <button type="button" class="skills__item" data-skill="HTML"
-            data-desc="Estructuración de páginas web con HTML semántico.">
-            HTML
+          <button type="button" class="skills__item" data-skill="Redes"
+            data-desc="Configuración y mantenimiento de redes: cableado, switches, VPN y resolución de incidencias de conectividad.">
+            Redes
           </button>
         </li>
       </ul>
@@ -106,20 +100,23 @@
           <p>Sitio web desarrollado con HTML y CSS para presentar mi perfil, habilidades y proyectos académicos.</p>
           <a href="https://github.com/fchancayb/portafolio-frederit-chancay" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
         </article>
+      </div>
+      <div class="projects projects--extra" id="extra-projects">
+        <article class="project-card">
+          <img src="img/agenda-preview.png" alt="Vista previa de Agenda" class="project-card__image">
+          <h3>Agenda</h3>
+          <p>Aplicación web para organizar tareas por nivel de prioridad y crear notas tipo recordatorio.</p>
+          <a href="https://agenda-e7fe.vercel.app/" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+        </article>
 
         <article class="project-card">
           <img src="img/entrenamiento-preview.png" alt="Vista previa de Entrenamiento" class="project-card__image">
           <h3>Entrenamiento</h3>
           <p>Aplicación web para crear y seguir un plan de entrenamiento semanal, con cronómetro de entreno y progreso diario.</p>
-        </article>
-
-        <article class="project-card project-card--extra">
-          <img src="img/agenda-preview.png" alt="Vista previa de Agenda" class="project-card__image">
-          <h3>Agenda</h3>
-          <p>Aplicación web para organizar tareas por nivel de prioridad y crear notas tipo recordatorio.</p>
+          <a href="https://fit-e7fe.vercel.app/" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
         </article>
       </div>
-      <button type="button" class="projects__toggle" id="projects-toggle">Ver más</button>
+      <button type="button" class="about__toggle" id="projects-toggle">Ver más...</button>
     </section>
 
     <section id="contacto">
@@ -141,7 +138,7 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Frederit Chancay. Todos los derechos reservados.</p>
+    <p>&copy; 2026 Frederit F. Chancay.</p>
     <div class="footer__links">
       <a href="https://github.com/fchancayb" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/frederitchancaybriones" target="_blank" rel="noopener noreferrer">LinkedIn</a>
